@@ -6,19 +6,19 @@
 /*   By: kborowsk <kborowsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 11:02:26 by kborowsk          #+#    #+#             */
-/*   Updated: 2024/07/11 13:02:21 by kborowsk         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:10:18 by kborowsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_comb2(void);
+// void	ft_print_comb2(void);
 
-int	main(void)
-{
-	ft_print_comb2();
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_print_comb2();
+// 	return (0);
+// }
 
 void	ft_print_comb2(void)
 {
@@ -47,5 +47,4 @@ void	ft_print_comb2(void)
 		}
 		one += 1 ;
 	}
-	write(1, "\n", 1);
 }
