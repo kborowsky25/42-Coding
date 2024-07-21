@@ -41,8 +41,8 @@ int	ft_str_is_alpha(char *str)
 		}
 		else
 		{
-			return (1);
+			return (0);
 		}
 	}
-	return (0);
+	return (1);
 }
