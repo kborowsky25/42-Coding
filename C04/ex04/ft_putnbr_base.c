@@ -1,77 +1,83 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kikiboro <kikiboro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/21 17:39:11 by kikiboro          #+#    #+#             */
+/*   Updated: 2024/07/21 18:19:18 by kikiboro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putnbr_base(int nbr, char *base);
-int ft_valid(char *base, int nbr);
-int ft_write(char c);
+#include <unistd.h>
+// #include <stdio.h>
+
+// void ft_putnbr_base(int nbr, char *base);
+int ft_valid(char *base);
+void ft_write(char c);
 int ft_count(char *string);
 
-int main(void)
-{
-    int nbr = 234;
-    char *base = "01"; // binary 
-    ft_putnbr_base(nbr, base);
-}
+// int main(void)
+// {
+//     int nbr = 234;
+//     char *base = "0123456789"; // binary 
+//     ft_putnbr_base(nbr, base);
+// }
 
 void ft_putnbr_base(int nbr, char *base)
 {
-    int count = 0;
-    int pos_num = 0;
-    int valid = ft_valid(base, nbr);
-    int len = ft_count(base);
-    if (valid == 0)
-    {
-        if (nbr >= 0 && nbr < len)
-        {
-            ft_write(base[nbr]);
-        }
-        if (nbr < 0)
-        {
-            pos_num = -nbr;
-            ft_write('-');
-            ft_putnbr_base(pos_num, base);
-        }
-        if (nbr >= len)
-        {
-            ft_putnbr_base(nbr / len, base);
-            ft_putnbr_base(nbr % len, base);
-        }
-    }
+
+	int	len;
+	int	error;
+	long	nb;
+
+	error = ft_valid(base);
+	len = ft_count(base);
+	nb = nbr;
+	if (error == 1)
+	{
+		if (nb < 0)
+		{
+			ft_write('-');
+			nb *= -1;
+		}
+		if (nb < len)
+			ft_write(base[nb]);
+		if (nb >= len)
+		{
+			ft_putnbr_base(nb / len, base);
+			ft_putnbr_base(nb % len, base);
+		}
+	}
 }
 
-int ft_valid(char *base, int nbr)
+int ft_valid(char *base)
 {
     int count = 0;
     int x;
 
-    if (base[0] == '\0' || ft_count(base) < 2)
-    {
-        return 1;
-    }
+    if (base[0] == '\0' || ft_count(base) == 1)
+        return 0;
     while (base[count] != 0)
     {
-        if (base[count] == '+' || base[count] == '-')
-        {
-            return 1;
-        }
+        if (base[count] == 43 || base[count] == 45 || base[count] <= 32 || base[count] == 127)
+            return 0;
         x = count + 1;
-        while (base[x] != 0)
+        while (x < ft_count(base))
         {
             if (base[count] == base[x])
-            {
-                return 1;
-            }
+                return 0;
             x++;
         }
         count++;
     }
-    return 0;
+    return 1;
 }
 
-int ft_write(char c)
+void ft_write(char c)
 {
     write(1, &c, 1);
-    return 0;
 }
 
 int ft_count(char *string)

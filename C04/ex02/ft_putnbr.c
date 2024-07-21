@@ -1,33 +1,46 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kikiboro <kikiboro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/21 17:37:45 by kikiboro          #+#    #+#             */
+/*   Updated: 2024/07/21 17:47:18 by kikiboro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putnbr(int nb);
+#include <unistd.h>
+// #include <stdio.h>
+
+// void ft_putnbr(int nb);
 int ft_write(char c);
 
-int main(void)
-{
-    int nb = 234;
-    ft_putnbr(nb);
-}
+// int main(void)
+// {
+//     int nb = 234;
+//     ft_putnbr(nb);
+// }
 
-void ft_putnbr(int nb)
+void    ft_putnbr(int nb)
 {
-    int count = 0;
-    int pos_num = 0;
-    char intochar = ' ';
-
-    if (nb >= 0 && nb <= 9)
+    if (nb == -2147483648)
     {
-        intochar = nb + '0';
-        ft_write(intochar);
-    }
-    if (nb < 0)
-    {
-        pos_num = -nb;
         ft_write('-');
-        ft_putnbr(pos_num);
+        ft_write('2');
+        ft_putnbr(147483648);
     }
-    if (nb > 9)
+    else if (nb < 0)
+    {
+        ft_write('-');
+        nb = -nb;
+        ft_putnbr(nb);
+    }
+    else if (nb <= 9)
+    {
+        ft_write(nb + 48);
+    }
+    else 
     {
         ft_putnbr(nb / 10);
         ft_putnbr(nb % 10);
