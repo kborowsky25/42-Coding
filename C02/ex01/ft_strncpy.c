@@ -39,7 +39,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[count] = src[count];
 		count++;
 	}
-	while (count > n)
+	while (count < n)
 	{
 		dest[count] = '\0';
 		count++;
