@@ -31,7 +31,7 @@ int main(void)
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	count;
+	unsigned int	count;
 
 	count = 0;
 	while (src[count] != 0 && count < n)
