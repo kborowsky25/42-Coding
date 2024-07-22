@@ -1,21 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kikiboro <kikiboro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/22 10:17:51 by kikiboro          #+#    #+#             */
+/*   Updated: 2024/07/22 10:21:06 by kikiboro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <stdio.h>
+// #include <stdio.h>
 
-char *ft_strncat(char *dest, char *src, unsigned int nb);
+// char *ft_strncat(char *dest, char *src, unsigned int nb);
 
-int main(void)
-{
-	char dest [] = "Hello";
-	char src [] = "Goodbye";
-	unsigned int nb = 4;
-	char *string = ft_strncat(dest, src, nb);
-	printf("%s", string);
-}
+// int main(void)
+// {
+// 	char dest [] = "Hello";
+// 	char src [] = "Goodbye";
+// 	unsigned int nb = 4;
+// 	char *string = ft_strncat(dest, src, nb);
+// 	printf("%s", string);
+// }
 
 char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	counter_dest;
-	int	counter_src;
+	unsigned int	counter_dest;
+	unsigned int	counter_src;
 
 	counter_dest = 0;
 	counter_src = 0;
