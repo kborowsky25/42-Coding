@@ -3,36 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kikiboro <kikiboro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kborowsk <kborowsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 10:18:00 by kikiboro          #+#    #+#             */
-/*   Updated: 2024/07/22 10:18:01 by kikiboro         ###   ########.fr       */
+/*   Updated: 2024/07/23 12:36:06 by kborowsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-// #include <stdio.h>
+/* #include <stdio.h>
 
-// char	*ft_strstr(char *str, char *to_find);
+char	*ft_strstr(char *str, char *to_find);
 
-// int main(void)
-// {
-// 	char str [] = "Hello my name is kiki";
-// 	char to_find [] = "name";
-// 	char *string = ft_strstr(str, to_find);
-// 	printf("%s", string);
-// }
+int main(void)
+{
+	char str [] = "Hello my name is kiki";
+	char to_find [] = "name";
+	char *string = ft_strstr(str, to_find);
+	printf("%s", string);
+} */
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int counter;
-	int i;
+	int	counter;
+	int	i;
 
 	counter = 0;
 	i = 0;
 	if (to_find[counter] == 0)
 	{
-		return str;
+		return (str);
 	}
 	while (str[counter] != 0)
 	{
@@ -47,5 +47,5 @@ char	*ft_strstr(char *str, char *to_find)
 		i = 0;
 		counter++;
 	}
-	return NULL;
+	return (NULL);
 }
