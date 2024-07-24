@@ -1,14 +1,14 @@
 #include <unistd.h>
-#include <stdio.h>
+// #include <stdio.h>
 
-int ft_sqrt(int nb);
+// int ft_sqrt(int nb);
 
-int main(void)
-{
-    int nb = 36;
-    int ans = ft_sqrt(nb);
-    printf("%i", ans);
-}
+// int main(void)
+// {
+//     int nb = 36;
+//     int ans = ft_sqrt(nb);
+//     printf("%i", ans);
+// }
 
 int ft_sqrt(int nb)
 {

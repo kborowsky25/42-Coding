@@ -1,15 +1,15 @@
 #include <unistd.h>
-#include <stdio.h>
+// #include <stdio.h>
 
-int ft_recursive_power(int nb, int power);
+// int ft_recursive_power(int nb, int power);
 
-int main(void)
-{
-    int nb = 8;
-    int power = 3;
-    int result = ft_recursive_power(nb, power);
-    printf("%i", result);
-}
+// int main(void)
+// {
+//     int nb = 8;
+//     int power = 3;
+//     int result = ft_recursive_power(nb, power);
+//     printf("%i", result);
+// }
 
 int ft_recursive_power(int nb, int power)
 {
