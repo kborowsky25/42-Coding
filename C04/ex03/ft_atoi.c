@@ -6,7 +6,7 @@
 /*   By: kikiboro <kikiboro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 17:39:16 by kikiboro          #+#    #+#             */
-/*   Updated: 2024/07/21 17:47:40 by kikiboro         ###   ########.fr       */
+/*   Updated: 2024/07/24 17:15:30 by kikiboro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 // #include <stdio.h>
 
 int ft_whitespaces(int *count, char *str);
-// int ft_atoi(char *str);
+int ft_atoi(char *str);
 
 // int main(void)
 // {

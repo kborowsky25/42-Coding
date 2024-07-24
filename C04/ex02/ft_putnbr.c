@@ -6,14 +6,14 @@
 /*   By: kikiboro <kikiboro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 17:37:45 by kikiboro          #+#    #+#             */
-/*   Updated: 2024/07/21 17:47:18 by kikiboro         ###   ########.fr       */
+/*   Updated: 2024/07/24 17:07:44 by kikiboro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 // #include <stdio.h>
 
-// void ft_putnbr(int nb);
+void ft_putnbr(int nb);
 int ft_write(char c);
 
 // int main(void)
